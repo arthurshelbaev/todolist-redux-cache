@@ -1,0 +1,173 @@
+body {
+    background-color: black;
+    color: white;
+    font-family: "Gill Sans";
+    display: flex;
+    justify-content: center;
+    user-select: none;
+
+    .app {
+        display: flex;
+        gap: 20px;
+        flex-direction: column;
+        align-items: center;
+        position: relative;
+        min-height: 97vh;
+
+        .form {
+            min-width: 40vw;
+
+            .input {
+                width: 100%;
+                box-sizing: border-box;
+                border: 1px solid white;
+                background-color: black;
+                color: white;
+                padding: 5px 10px;
+                border-radius: 5px;
+                font-size: 12px;
+            }
+        }
+
+        .filters {
+            min-width: 40vw;
+            display: flex;
+            justify-content: space-between;
+
+            .selector {
+                width: 33.3%;
+                border-top-left-radius: 5px;
+                border-bottom-left-radius: 5px;
+                border-top-right-radius: 5px;
+                border-bottom-right-radius: 5px;
+                background-color: black;
+                color: white;
+            }
+        }
+
+        .todos {
+            padding-bottom: 40px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-width: 35vw;
+            max-width: 45vw;
+
+            .todo {
+                gap: 20px;
+                display: flex;
+                padding: 5px 0;
+
+                justify-content: space-between;
+                word-break: break-all;
+                text-align: center;
+                align-items: center;
+
+                .delete {
+                    border-radius: 5px;
+                    height: max-content;
+                }
+            }
+        }
+    }
+
+    .footer {
+        width: max-content;
+        color: dimgray;
+        position: absolute;
+        bottom: 0;
+    }
+}
+
+@media all and (min-width: 1141px) {
+    .header {
+        font-size: 25px;
+    }
+    .footer {
+        font-size: 12px;
+    }
+    .todo {
+        min-width: 35vw;
+        max-width: 50vw;
+    }
+}
+
+@media all and (min-width: 961px) and (max-width: 1140px) {
+    .header {
+        font-size: 23px;
+    }
+    .footer {
+        font-size: 11px;
+    }
+    .form {
+        width: 45vw;
+    }
+
+    .filters {
+        width: 45vw;
+    }
+
+    .todo {
+        min-width: 45vw;
+        max-width: 60vw;
+    }
+}
+
+@media all and (min-width: 721px) and (max-width: 960px) {
+    .header {
+        font-size: 21px;
+    }
+    .footer {
+        font-size: 10px;
+    }
+    .form {
+        width: 55vw;
+    }
+
+    .filters {
+        width: 55vw;
+    }
+    .todo {
+        min-width: 55vw;
+        max-width: 70vw;
+    }
+}
+@media all and (min-width: 541px) and (max-width: 720px) {
+    .header {
+        font-size: 19px;
+    }
+    .footer {
+        font-size: 9px;
+    }
+    .form {
+        width: 65vw;
+    }
+
+    .filters {
+        width: 65vw;
+    }
+    .todo {
+        min-width: 65vw;
+        max-width: 80vw;
+    }
+}
+@media all and (max-width: 540px) {
+    .header {
+        font-size: 17px;
+    }
+    .footer {
+        font-size: 8px;
+    }
+    
+    .form {
+        width: 75vw;
+    }
+
+    .filters {
+        width: 75vw;
+    }
+    .todo {
+        min-width: 75vw;
+        max-width: 90vw;
+    }
+}
