@@ -151,7 +151,7 @@ body {
         max-width: 80vw;
     }
 }
-@media all and (max-width: 540px) {
+@media all and (min-width: 461px) and (max-width: 540px) {
     .header {
         font-size: 17px;
     }
@@ -169,5 +169,28 @@ body {
     .todo {
         min-width: 75vw;
         max-width: 90vw;
+    }
+}
+@media all and (max-width: 460px) {
+    .header {
+        font-size: 17px;
+    }
+    .footer {
+        font-size: 8px;
+    }
+    
+    .form {
+        width: 85vw;
+    }
+
+    .filters {
+        width: 85vw;
+        .selector {
+            font-size: 12px;
+        }
+    }
+    .todo {
+        min-width: 80vw;
+        max-width: 95vw;
     }
 }
