@@ -170,6 +170,13 @@ body {
         min-width: 75vw;
         max-width: 90vw;
     }
+    .footer {
+        font-size: 8px;
+    }
+    .app {
+        min-height: 90vh;
+    }
+    
 }
 @media all and (max-width: 460px) {
     .header {
@@ -192,5 +199,11 @@ body {
     .todo {
         min-width: 80vw;
         max-width: 95vw;
+    }
+    .footer {
+        font-size: 7px;
+    }
+    .app {
+        min-height: 90vh;
     }
 }
