@@ -29,6 +29,7 @@ body {
                 border-radius: 5px;
                 font-size: 12px;
             }
+
             .input:focus {
                 outline: #1262bb 1px solid;
             }
@@ -82,6 +83,7 @@ body {
                     display: flex;
                     justify-content: center;
                     align-items: center;
+
                     .symbol {
                         position: absolute;
                         display: flex;
@@ -92,10 +94,12 @@ body {
                         height: 10px;
                         color: black;
                     }
+
                     .checkbox {
                         display: none;
-                    }   
+                    }
                 }
+
                 .delete {
                     border-radius: 5px;
                     height: max-content;
@@ -107,6 +111,7 @@ body {
                     display: flex;
                     justify-content: center;
                     align-items: center;
+
                     .delSym {
                         color: white;
                         position: absolute;
@@ -236,20 +241,15 @@ body {
         min-width: 75vw;
         max-width: 90vw;
     }
-
-    .footer {
-        font-size: 8px;
-    }
-
 }
 
-@media all and (max-width: 460px) {
+@media all and (min-width: 406px) and (max-width: 460px) {
     .header {
         font-size: 17px;
     }
 
     .footer {
-        font-size: 8px;
+        font-size: 7px;
         width: 50vw;
     }
 
@@ -269,8 +269,32 @@ body {
         min-width: 80vw;
         max-width: 95vw;
     }
+}
+
+@media all and (max-width: 405px) {
+    .header {
+        font-size: 17px;
+    }
 
     .footer {
         font-size: 7px;
+        width: 60vw;
+    }
+
+    .form {
+        width: 85vw;
+    }
+
+    .filters {
+        width: 85vw;
+
+        .selector {
+            font-size: 12px;
+        }
+    }
+
+    .todo {
+        min-width: 80vw;
+        max-width: 95vw;
     }
 }
