@@ -1,7 +1,9 @@
 body {
-    background-color: black;
+    background-color: #1d1d1f;
     color: white;
-    font-family: "Gill Sans";
+
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+
     display: flex;
     justify-content: center;
     user-select: none;
@@ -12,7 +14,7 @@ body {
         flex-direction: column;
         align-items: center;
         position: relative;
-        min-height: 97vh;
+        min-height: 90vh;
 
         .form {
             min-width: 40vw;
@@ -20,33 +22,44 @@ body {
             .input {
                 width: 100%;
                 box-sizing: border-box;
-                border: 1px solid white;
-                background-color: black;
+                border: 1px solid #2d2c31;
+                background-color: #1d1d1f;
                 color: white;
                 padding: 5px 10px;
                 border-radius: 5px;
                 font-size: 12px;
+            }
+            .input:focus {
+                outline: #1262bb 1px solid;
             }
         }
 
         .filters {
             min-width: 40vw;
             display: flex;
-            justify-content: space-between;
 
             .selector {
-                width: 33.3%;
+                width: 100%;
+                border: 2px solid #26252a;
+                background-color: #1d1d1f;
+                color: white;
+            }
+
+            .slct_1 {
                 border-top-left-radius: 5px;
                 border-bottom-left-radius: 5px;
+                border-right: 0;
+            }
+
+            .slct_3 {
+                border-left: 0;
                 border-top-right-radius: 5px;
                 border-bottom-right-radius: 5px;
-                background-color: black;
-                color: white;
             }
         }
 
         .todos {
-            padding-bottom: 40px;
+            padding-bottom: 10vh;
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -57,25 +70,59 @@ body {
                 gap: 20px;
                 display: flex;
                 padding: 5px 0;
-
                 justify-content: space-between;
                 word-break: break-all;
                 text-align: center;
                 align-items: center;
 
+                .checkcase {
+                    border: 1px solid #FFD52E;
+                    padding: 7.5px;
+                    border-radius: 50%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    .symbol {
+                        position: absolute;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        font-size: 1em;
+                        width: 10px;
+                        height: 10px;
+                        color: black;
+                    }
+                    .checkbox {
+                        display: none;
+                    }   
+                }
                 .delete {
                     border-radius: 5px;
                     height: max-content;
+                    background-color: #fc4838;
+
+                    padding: 8px;
+                    border: 0;
+                    border-radius: 50%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    .delSym {
+                        color: white;
+                        position: absolute;
+                        padding-bottom: 1.5px;
+                        font-size: 13px;
+                    }
                 }
             }
         }
     }
 
     .footer {
-        width: max-content;
         color: dimgray;
         position: absolute;
         bottom: 0;
+        text-align: center;
     }
 }
 
@@ -83,9 +130,12 @@ body {
     .header {
         font-size: 25px;
     }
+
     .footer {
         font-size: 12px;
+        width: 29vw;
     }
+
     .todo {
         min-width: 35vw;
         max-width: 50vw;
@@ -96,9 +146,12 @@ body {
     .header {
         font-size: 23px;
     }
+
     .footer {
         font-size: 11px;
+        width: 32vw;
     }
+
     .form {
         width: 45vw;
     }
@@ -117,9 +170,12 @@ body {
     .header {
         font-size: 21px;
     }
+
     .footer {
         font-size: 10px;
+        width: 39vw;
     }
+
     .form {
         width: 55vw;
     }
@@ -127,18 +183,23 @@ body {
     .filters {
         width: 55vw;
     }
+
     .todo {
         min-width: 55vw;
         max-width: 70vw;
     }
 }
+
 @media all and (min-width: 541px) and (max-width: 720px) {
     .header {
         font-size: 19px;
     }
+
     .footer {
         font-size: 9px;
+        width: 47vw;
     }
+
     .form {
         width: 65vw;
     }
@@ -146,19 +207,23 @@ body {
     .filters {
         width: 65vw;
     }
+
     .todo {
         min-width: 65vw;
         max-width: 80vw;
     }
 }
+
 @media all and (min-width: 461px) and (max-width: 540px) {
     .header {
         font-size: 17px;
     }
+
     .footer {
         font-size: 8px;
+        width: 50vw;
     }
-    
+
     .form {
         width: 75vw;
     }
@@ -166,44 +231,46 @@ body {
     .filters {
         width: 75vw;
     }
+
     .todo {
         min-width: 75vw;
         max-width: 90vw;
     }
+
     .footer {
         font-size: 8px;
     }
-    .app {
-        min-height: 90vh;
-    }
-    
+
 }
+
 @media all and (max-width: 460px) {
     .header {
         font-size: 17px;
     }
+
     .footer {
         font-size: 8px;
+        width: 50vw;
     }
-    
+
     .form {
         width: 85vw;
     }
 
     .filters {
         width: 85vw;
+
         .selector {
             font-size: 12px;
         }
     }
+
     .todo {
         min-width: 80vw;
         max-width: 95vw;
     }
+
     .footer {
         font-size: 7px;
-    }
-    .app {
-        min-height: 90vh;
     }
 }

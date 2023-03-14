@@ -16,13 +16,17 @@ const TodoList = () => {
     <div className="todos">
       {todos.map((todo) => (
         <div key={todo.id} className="todo">
+          <label className="checkcase" style={{backgroundColor: todo.completed ? "#FFD52E" : null}}>
+            {todo.completed ? <div className="symbol">&#x2713;</div> : null}
           <input
+            className="checkbox"
             type="checkbox"
             checked={todo.completed}
             onChange={() => dispatch(toggleTodo(todo.id))}
           />
-          <div className="text" style={{textDecoration: todo.completed ? "line-through" : null}}>{todo.title}</div>
-          <button className="delete" onClick={() => dispatch(removeTodo(todo.id))}>&times;</button>
+          </label>
+          <div className="text" style={{textDecoration: todo.completed ? "line-through 2px #FFD52E" : null}}>{todo.title}</div>
+          <button className="delete" onClick={() => dispatch(removeTodo(todo.id))}>{<div className="delSym">–</div>}</button>
         </div>
       ))}
     </div>
