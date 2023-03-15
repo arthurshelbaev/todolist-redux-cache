@@ -104,8 +104,7 @@ body {
                     border-radius: 5px;
                     height: max-content;
                     background-color: #fc4838;
-                    width: 1em;
-                    height: 1em;
+                    padding: 7.5px;
                     border: 1px solid #fc4838;
                     border-radius: 50%;
                     display: flex;
@@ -117,6 +116,7 @@ body {
                         width: 9px;
                         height: 1.5px;
                         border: 0;
+                        position: absolute;
 
                     }
                 }
