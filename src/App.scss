@@ -104,7 +104,6 @@ body {
                     border-radius: 5px;
                     height: max-content;
                     background-color: #fc4838;
-
                     width: 1em;
                     height: 1em;
                     border: 1px solid #fc4838;
@@ -113,9 +112,12 @@ body {
                     justify-content: center;
                     align-items: center;
 
+                    .minus {
+                        background-color: white;
+                        width: 9px;
+                        height: 1.5px;
+                        border: 0;
 
-                    .delSym {
-                        color: white;
                     }
                 }
             }
@@ -129,9 +131,32 @@ body {
         text-align: center;
     }
 }
-@media all and (min-width: 541px) {
-    .delSym {
-        padding-bottom: 2px;
+
+@media (prefers-reduced-motion: no-preference) {
+    .header:hover {
+        animation: App-logo-float infinite 4s ease-in-out;
+    }
+}
+@keyframes App-logo-float {
+    0% {
+        transform: translateX(0);
+    }
+
+    20% {
+        transform: translateX(50px);
+
+    }
+    50% {
+        transform: translateX(0);
+    }
+    
+    80% {
+        transform: translateX(-50px);
+    }
+
+    100% {
+        transform: translateX(0px);
+
     }
 }
 

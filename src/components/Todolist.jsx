@@ -26,7 +26,7 @@ const TodoList = () => {
           />
           </label>
           <div className="text" style={{textDecoration: todo.completed ? "line-through 2px #FFD52E" : null}}>{todo.title}</div>
-          <div className="delete" onClick={() => dispatch(removeTodo(todo.id))}>{<div className="delSym">&minus;</div>}</div>
+          <div className="delete" onClick={() => dispatch(removeTodo(todo.id))}><div className="minus"></div></div>
         </div>
       ))}
     </div>
