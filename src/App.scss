@@ -64,14 +64,14 @@ body {
             display: flex;
             flex-direction: column;
             align-items: center;
-            min-width: 35vw;
-            max-width: 45vw;
+
+
 
             .todo {
                 gap: 20px;
                 display: flex;
                 padding: 5px 0;
-                justify-content: space-between;
+                justify-content: space-around;
                 word-break: break-all;
                 text-align: center;
                 align-items: center;
@@ -323,7 +323,7 @@ body {
     }
 
     .todo {
-        min-width: 80vw;
-        max-width: 95vw;
+        min-width: 85vw;
+        max-width: 100vw;
     }
 }
