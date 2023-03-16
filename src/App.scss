@@ -1,9 +1,7 @@
 body {
     background-color: #1d1d1f;
     color: white;
-
     font-family: -apple-system, BlinkMacSystemFont, sans-serif;
-
     display: flex;
     justify-content: center;
     user-select: none;
@@ -130,29 +128,18 @@ body {
 
 @media (prefers-reduced-motion: no-preference) {
     .header:hover {
-        animation: App-logo-float infinite 4s ease-in-out;
+        animation: App-logo-float infinite 1.5s ease-in-out;
     }
 }
 @keyframes App-logo-float {
     0% {
-        transform: translateX(0);
-    }
-
-    20% {
-        transform: translateX(50px);
-
+        transform: translateY(0);
     }
     50% {
-        transform: translateX(0);
+        transform: translateY(10px);
     }
-    
-    80% {
-        transform: translateX(-50px);
-    }
-
     100% {
-        transform: translateX(0px);
-
+        transform: translateY(0);
     }
 }
 

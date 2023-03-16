@@ -14,8 +14,20 @@ const TodoList = () => {
 
   const [showDel, setShowDel] = useState(false)
 
+  let timeout
+
+  function down () {
+    timeout = setTimeout(() => {
+      setShowDel(!showDel)
+    }, 600)
+  }
+
+  function up () {
+    clearTimeout(timeout)
+  }
+
   return (
-    <div className="todos">
+    <div className="todos" >
       {todos.map((todo) => (
         <div key={todo.id} className="todo">
           <label className="checkcase" style={{backgroundColor: todo.completed ? "#FFD52E" : null, border: todo.completed ? "1px solid #FFD52E" : "1px solid #b7b7b7"}}>
@@ -27,7 +39,7 @@ const TodoList = () => {
             onChange={() => dispatch(toggleTodo(todo.id))}
           />
           </label>
-          <div className="text" onDoubleClick={() => setShowDel(!showDel)} style={{textDecoration: todo.completed ? "line-through 2px #FFD52E" : null}}>{todo.title}</div>
+          <div className="text" onMouseDown={() => down()} onMouseUp={() => up()} style={{textDecoration: todo.completed ? "line-through 2px #FFD52E" : null}}>{todo.title}</div>
           {showDel ? <div className="delete" onClick={() => dispatch(removeTodo(todo.id))}><div className="minus"></div></div> : null}
         </div>
       ))}
