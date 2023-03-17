@@ -39,7 +39,7 @@ const TodoList = () => {
             onChange={() => dispatch(toggleTodo(todo.id))}
           />
           </label>
-          <div className="text" onMouseDown={() => down()} onMouseUp={() => up()} style={{textDecoration: todo.completed ? "line-through 2px #FFD52E" : null}}>{todo.title}</div>
+          <div className="text" onDoubleClick={() => setShowDel(!showDel)} onMouseDown={() => down()} onMouseUp={() => up()} style={{textDecoration: todo.completed ? "line-through 2px #FFD52E" : null}}>{todo.title}</div>
           {showDel ? <div className="delete" onClick={() => dispatch(removeTodo(todo.id))}><div className="minus"></div></div> : null}
         </div>
       ))}
