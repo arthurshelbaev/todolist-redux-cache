@@ -6,7 +6,7 @@ import {rootReducer} from './rootReducer';
 
 // export const store = createStore(rootReducer);
 
-export const cofigureStore = () => {
+export const configureStore = () => {
   const persistedState = loadState()
 
   const store = createStore(
