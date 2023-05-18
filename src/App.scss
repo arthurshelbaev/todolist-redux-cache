@@ -12,7 +12,7 @@ body {
         flex-direction: column;
         align-items: center;
         position: relative;
-        min-height: 97vh;
+
 
         .form {
             min-width: 40vw;
@@ -269,6 +269,16 @@ body {
     .todo {
         min-width: 75vw;
         max-width: 90vw;
+    }
+}
+@media all and (min-width: 541px) {
+    .app {
+        min-height: 97vh;
+    }
+}
+@media all and (max-width: 540px) {
+    .app {
+        min-height: 90vh;
     }
 }
 
