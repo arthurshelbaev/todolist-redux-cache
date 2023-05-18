@@ -9,6 +9,7 @@ const TodoList = () => {
   const activeFilter = useSelector(state => state.filters)
 
   const todos = useSelector(state => selectVisibleTodos(state, activeFilter))
+  const message = useSelector(state => state.message)
 
   const dispatch = useDispatch();
 
@@ -27,7 +28,7 @@ const TodoList = () => {
   }
 
   return (
-    <div className="todos" >
+    <div className="todos" style={{paddingBottom: message ? "30vh" : "13vh"}}>
       {todos.map((todo) => (
         <div key={todo.id} className="todo">
           <label className="checkcase" style={{ backgroundColor: todo.completed ? "#FFD52E" : null, border: todo.completed ? "1px solid #FFD52E" : "1px solid #b7b7b7" }}>

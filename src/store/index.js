@@ -4,8 +4,6 @@ import throttle from "lodash/throttle"
 
 import {rootReducer} from './rootReducer';
 
-// export const store = createStore(rootReducer);
-
 export const configureStore = () => {
   const persistedState = loadState()
 
@@ -17,7 +15,8 @@ export const configureStore = () => {
 
   store.subscribe(throttle(() => {
     saveState({
-      todos: store.getState().todos
+      todos: store.getState().todos,
+      message: store.getState().message,
     })
   }, 500))
 
