@@ -8,9 +8,9 @@ import Message from './components/Message';
 export default function App() {
   return (
     <div className="app">
+      <input type"date"/>
       <div className="header">Список задач</div>
       <NewTodo />
-      <input type"date"/>
       <Filters />
       <TodoList />
       <Message />
