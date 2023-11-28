@@ -16,6 +16,9 @@ const NewTodo = () => {
   return (
     <form className="form" onSubmit={handleSubmit}>
       <input className="input" type="text" name="title" placeholder="Нажмите Enter, чтобы добавить задачу." />
+      <input className="input" type="text" name="title" placeholder="Нажмите Enter, чтобы добавить задачу." />
+      <input className="input" type="date" name="title" placeholder="Нажмите Enter, чтобы добавить задачу." />
+      <input type="text" name="title" placeholder="Нажмите Enter, чтобы добавить задачу." />
     </form>
   );
 };
