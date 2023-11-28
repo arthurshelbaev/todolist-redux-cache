@@ -10,6 +10,7 @@ export default function App() {
     <div className="app">
       <div className="header">Список задач</div>
       <NewTodo />
+      <input type"date"/>
       <Filters />
       <TodoList />
       <Message />
